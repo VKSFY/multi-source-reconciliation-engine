@@ -1,0 +1,91 @@
+{
+  "sources": [
+    {
+      "name": "crm_csv",
+      "type": "csv",
+      "path": "samples/csv/customers.csv"
+    },
+    {
+      "name": "finance_excel",
+      "type": "excel",
+      "path": "samples/excel/customers.xlsx"
+    },
+    {
+      "name": "ops_api",
+      "type": "api",
+      "path": "samples/api/customers_api.json"
+    },
+    {
+      "name": "archive_pdf",
+      "type": "pdf",
+      "path": "samples/pdf/customers.pdf"
+    }
+  ],
+  "source_priority": [
+    "finance_excel",
+    "ops_api",
+    "crm_csv",
+    "archive_pdf"
+  ],
+  "id_columns": [
+    "customer_id",
+    "email",
+    "phone"
+  ],
+  "critical_columns": [
+    "name",
+    "email",
+    "phone",
+    "address",
+    "amount",
+    "status"
+  ],
+  "output_dir": "output",
+  "similarity_threshold": 0.9,
+  "field_aliases": {
+    "amount": [
+      "amount",
+      "balance",
+      "total_amount",
+      "value",
+      "total",
+      "order_total",
+      "invoice_total",
+      "net_amount"
+    ],
+    "customer_id": [
+      "buyer_id",
+      "account_id"
+    ],
+    "date": [
+      "date",
+      "order_date",
+      "invoice_date",
+      "created_at",
+      "txn_date",
+      "date_created",
+      "timestamp"
+    ],
+    "email": [
+      "email",
+      "email_address",
+      "mail",
+      "contact"
+    ],
+    "order_id": [
+      "order_id",
+      "orderid",
+      "order id",
+      "id",
+      "invoice",
+      "invoice_id",
+      "invoice id",
+      "invoice_no",
+      "invoice number",
+      "txn id",
+      "txn_id",
+      "invoiceNumber",
+      "InvoiceNumber"
+    ]
+  }
+}
